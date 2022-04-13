@@ -60,29 +60,11 @@ public class Menu2 {
                     break;
                 case 4:
                     System.exit(4);
+                    break;
                 default:
                     System.out.println("No choice!");
 
             }
         }
-
-        //Rectangle
-//        System.out.println("Length of the rectangle: ");
-//        lengthOfRectangle = input.nextInt();
-//        System.out.println("Weight of the rectangle: ");
-//        weightOfRectangle = input.nextInt();
-//
-//        for (int i=0; i<lengthOfRectangle; i++){
-//            for(int j=0; j<weightOfRectangle; j++){
-//                System.out.print("*");
-//            }
-//            System.out.println("");
-//        }
-
-        //Triangle bottom-left
-
-
-        //Triangle top-left
-
     }
 }
