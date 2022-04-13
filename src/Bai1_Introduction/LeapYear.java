@@ -1,7 +1,7 @@
 package Bai1_Introduction;
 import java.util.Scanner;
 
-public class Year {
+public class LeapYear {
     public static void main(String[] args) {
         System.out.println("Enter a year: ");
         Scanner scanner = new Scanner(System.in);
