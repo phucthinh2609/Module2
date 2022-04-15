@@ -41,7 +41,5 @@ public class IsMinInArray {
         }
         System.out.println();
         System.out.println("The largest element value in array is: "+min+", at index: "+index+" ");
-
-
     }
 }

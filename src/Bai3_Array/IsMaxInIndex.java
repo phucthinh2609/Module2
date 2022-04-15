@@ -41,7 +41,5 @@ public class IsMaxInIndex {
         }
         System.out.println();
         System.out.println("The largest element value in array is: "+max+", at index: "+index+" ");
-
-
     }
 }
