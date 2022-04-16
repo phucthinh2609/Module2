@@ -33,7 +33,7 @@ public class IsMinInArray {
         int index=0;
 
 
-        for(int j=0; j<size; j++) {
+        for(int j=1; j<size; j++) {
             if(array[j]<min){
                 min = array[j];
                 index = j +1;
