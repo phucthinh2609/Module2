@@ -12,10 +12,10 @@ public class AcendingInArray {
 
         do{
             System.out.println("-----------------------------");
-            System.out.println("Count of array: ");
+            System.out.println("Number of elements of the array: ");
             count = input.nextInt();
             if(count>20 || count<=0){
-                System.out.println("A count of array is invalid!!!");
+                System.out.println("Number of elements of the array is invalid!!!");
             }
         }while(count>20 || count<=0);
 
