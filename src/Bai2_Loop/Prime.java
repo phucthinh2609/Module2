@@ -21,5 +21,11 @@ public class Prime {
             if(check) System.out.printf("%d is a prime", number);
             else System.out.printf("%d is not a prime", number);
         }
+
+//        public static boolean checkPrime (int number){
+//            if(number<2){
+//                return false;
+//            }
+//        }
     }
 }
