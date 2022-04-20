@@ -11,7 +11,7 @@ public class Circle_AccessModifier {
         radius = newRadius;
     }
 
-    private double getRadius() {
+    public double getRadius() {
         return radius;
     }
 
