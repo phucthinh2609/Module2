@@ -4,7 +4,7 @@ public class Rectangle {
     double width;
     double height;
 
-    public Rectangle(){
+    public Rectangle(double side, double v, String color, boolean filled){
     }
 
     public Rectangle(double width, double height){
