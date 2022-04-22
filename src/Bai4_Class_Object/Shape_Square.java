@@ -31,6 +31,13 @@ public class Shape_Square extends Shape_Rectangle{
         super.setHeight(height);
     }
 
+    public String toString() {
+        return "A Square with side="
+                + getSide()
+                + ", which is a subclass of "
+                + super.toString();
+    }
+
     public static void main(String[] args) {
         Shape_Square square = new Shape_Square();
         System.out.println(square);
