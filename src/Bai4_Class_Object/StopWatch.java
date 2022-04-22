@@ -6,6 +6,8 @@ public class StopWatch {
     private boolean running = false;
 
     public StopWatch(){
+        startTime = System.currentTimeMillis();
+        endTime = System.currentTimeMillis();
     }
 
     public void start(){
@@ -25,5 +27,13 @@ public class StopWatch {
         else
             elapsed = (endTime - startTime);
         return elapsed;
+    }
+
+    public static void main(String[] args) {
+        StopWatch a = new StopWatch();
+        a.start();
+//        a.end();
+        a.getElapsedTime();
+        System.out.println("Result "+a.getElapsedTime());
     }
 }

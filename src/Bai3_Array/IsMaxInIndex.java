@@ -29,8 +29,9 @@ public class IsMaxInIndex {
             System.out.print(array[j] + " ");
         }
 
-        int max = array[0];
+        int max = 0;
         int index=0;
+        int a = max +1;
 
 
         for(int j=0; j<size; j++) {
@@ -41,5 +42,6 @@ public class IsMaxInIndex {
         }
         System.out.println();
         System.out.println("The largest element value in array is: "+max+", at index: "+index+" ");
+        System.out.println(a);
     }
 }
