@@ -1,4 +1,4 @@
-package Bai4_Class_Object;
+package Bai6_Extands;
 
 public class Shape_Square extends Shape_Rectangle{
     public Shape_Square(){

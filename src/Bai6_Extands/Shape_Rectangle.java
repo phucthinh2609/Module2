@@ -1,4 +1,4 @@
-package Bai4_Class_Object;
+package Bai6_Extands;
 
 public class Shape_Rectangle extends Shape{
     private double width = 1.0;

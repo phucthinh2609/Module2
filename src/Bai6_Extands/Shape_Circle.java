@@ -1,4 +1,4 @@
-package Bai4_Class_Object;
+package Bai6_Extands;
 
 public class Shape_Circle extends Shape{
     private double radius = 1.0;
