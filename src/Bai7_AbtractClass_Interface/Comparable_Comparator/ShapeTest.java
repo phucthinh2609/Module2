@@ -1,4 +1,4 @@
-package Bai7_AbtractClass_Interface.Comparable;
+package Bai7_AbtractClass_Interface.Comparable_Comparator;
 
 public class ShapeTest {
     public static void main(String[] args) {

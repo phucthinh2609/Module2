@@ -1,4 +1,4 @@
-package Bai7_AbtractClass_Interface.Comparable;
+package Bai7_AbtractClass_Interface.Comparable_Comparator;
 import java.util.Arrays;
 
 public class ComparableCircleTest {
