@@ -1,10 +1,9 @@
 package Bai7_AbtractClass_Interface.colorable;
 
-import Bai7_AbtractClass_Interface.resizeable.Rectangle;
-
 public class Square extends Rectangle implements Colorable{
     public Square(){
-        super();
+        //super();
+
     }
 
     public Square(double side){
