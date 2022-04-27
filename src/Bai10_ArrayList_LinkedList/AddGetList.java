@@ -1,13 +1,13 @@
-package Bai10_ArrayList_LinkedList.myList;
+package Bai10_ArrayList_LinkedList;
 
 import java.util.Arrays;
 
-public class MyList<E> {
+public class AddGetList<E> {
     private int size = 0;
     private int DEFAULT_CAPACITY = 10;
     private Object[] elements;
 
-    public MyList(){
+    public AddGetList(){
         elements = new Object[DEFAULT_CAPACITY];
     }
 
@@ -31,7 +31,7 @@ public class MyList<E> {
     }
 
     public static void main(String[] args) {
-        MyList<Integer> myList = new MyList<>();
+        AddGetList<Integer> myList = new AddGetList<>();
 
         myList.add(2);
         myList.add(3);
