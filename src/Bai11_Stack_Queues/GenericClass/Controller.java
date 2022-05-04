@@ -1,8 +1,8 @@
-package Bai11_Stack_Queues.Generic;
+package Bai11_Stack_Queues.GenericClass;
 
 import java.util.ArrayList;
 
-public class Controller <E> {
+public class Controller <E extends People> {
     ArrayList<E> list = new ArrayList<>();
 
     public Controller(){

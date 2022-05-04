@@ -1,27 +1,27 @@
-package Bai10_ArrayList_LinkedList.ArrayList;
+package Bai11_Stack_Queues.GenericClass;
 
-public class Student {
-    String rollno;
-    String fullname;
+public class Student extends People{
+    String rollNo;
+    String fullName;
 
-    public Student(String rollno, String fullname) {
-        this.rollno = rollno;
-        this.fullname = fullname;
+    public Student(String rollNo, String fullName) {
+        this.rollNo = rollNo;
+        this.fullName = fullName;
     }
 
-    public String getRollno() {
-        return rollno;
+    public String getRollNo() {
+        return rollNo;
     }
 
-    public void setRollno(String rollno) {
-        this.rollno = rollno;
+    public void setRollNo(String rollNo) {
+        this.rollNo = rollNo;
     }
 
-    public String getFullname() {
-        return fullname;
+    public String getFullName() {
+        return fullName;
     }
 
-    public void setFullname(String fullname) {
-        this.fullname = fullname;
+    public void setFullName(String fullName) {
+        this.fullName = fullName;
     }
 }
