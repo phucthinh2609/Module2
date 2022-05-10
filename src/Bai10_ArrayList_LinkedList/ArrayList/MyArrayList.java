@@ -40,10 +40,6 @@ public class MyArrayList<E> {
         System.out.println("Element 2: "+myList.get(2));
         System.out.println("Element 1: "+myList.get(1));
 
-//        System.out.println("Element 5: "+ myList.get(3));
-
-//        myList.get(-1);
-//        System.out.println("Element -1: "+ myList.get(-1));
 
     }
 }
