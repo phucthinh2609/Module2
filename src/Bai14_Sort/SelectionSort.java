@@ -18,7 +18,7 @@ public class SelectionSort {
         }
     }
     public static void main(String[] args) {
-        int[] array = {2,5,24,5,10};
+        int[] array = {1, 9, 4.5, 6.6, 5.7, -4.5};
         System.out.println("Array = "+ Arrays.toString(array));
         selectionSort(array);
         System.out.println("After bubble sort Array = "+Arrays.toString(array));
