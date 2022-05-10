@@ -1,4 +1,4 @@
-package Bai4_Class_Object;
+package Bai5_Access_Modifier;
 
 public class Circle_AccessModifier {
     private double radius = 1;

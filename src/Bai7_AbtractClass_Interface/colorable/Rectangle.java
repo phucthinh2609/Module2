@@ -39,7 +39,7 @@ public class Rectangle extends Shape {
     public double getArea(){
         return width*height;
     }
-    
+
     @Override
     public double getPerimeter(){
         return 2*(width+height);

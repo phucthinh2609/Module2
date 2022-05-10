@@ -1,6 +1,6 @@
 package Bai21_DesignPattern.proxy;
 
-public class Caculator implements ICaculator{
+public class RealCaculator implements ICaculator{
     @Override
     public double add(double first, double second) {
         return first+second;

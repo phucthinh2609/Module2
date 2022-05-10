@@ -1,4 +1,4 @@
-package Bai4_Class_Object;
+package Bai5_Access_Modifier;
 
 public class Static_Student {
     private int rollno;

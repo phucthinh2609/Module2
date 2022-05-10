@@ -21,9 +21,9 @@ public class CircleTest {
 //            System.out.println(circle.resize(2.0));
 //        }
         Circle c = new Circle();
-        System.out.println(c.getArea());
-        c.resize(10);
-        System.out.println(c.getArea());
+        System.out.println(c.getRadius());
+        c.resize(0.5);
+        System.out.println(c.getRadius());
 
     }
 }

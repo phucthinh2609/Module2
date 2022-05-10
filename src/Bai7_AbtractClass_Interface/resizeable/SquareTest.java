@@ -14,7 +14,7 @@ public class SquareTest {
         Square square1 = new Square();
         square1.setSide(10);
         System.out.println(square1.getSide());
-        square1.resize(10);
+        square1.resize(0.5);
         System.out.println(square1.getSide());
     }
 }

@@ -9,11 +9,11 @@ interface WaterBottle{
 }
 
 
-public class Thirsty implements WaterBottle {
+public class ThirstyPeople implements WaterBottle {
     public static void main(String[] args) {
         System.out.println(color);
 
-        Thirsty ex = new Thirsty();
+        ThirstyPeople ex = new ThirstyPeople();
         ex.fillUp();
         ex.pourOut();
     }

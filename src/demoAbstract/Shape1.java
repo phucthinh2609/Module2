@@ -1,2 +1,4 @@
-package demoAbstract;public interface Shapw {
+package demoAbstract;
+
+public interface Shape1 {
 }

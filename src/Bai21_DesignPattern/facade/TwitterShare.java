@@ -1,6 +1,6 @@
 package Bai21_DesignPattern.facade;
 
-public class TwisterShare implements IShare{
+public class TwitterShare implements IShare{
     private String message;
 
     @Override
@@ -11,6 +11,6 @@ public class TwisterShare implements IShare{
     @Override
     public void share() {
         ///Complicated.....
-        System.out.println("Sharing to Twister: "+message);
+        System.out.println("Sharing to Twitter: "+message);
     }
 }

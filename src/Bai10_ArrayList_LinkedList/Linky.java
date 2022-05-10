@@ -1,7 +1,6 @@
 package Bai10_ArrayList_LinkedList;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 import java.util.LinkedList;
 
 public class Linky {
@@ -12,19 +11,20 @@ public class Linky {
         linkedList.add(2);
         linkedList.add(3);
 
-        Iterator<Integer> it = linkedList.iterator();
-        while (it.hasNext()){
-            if(it.next()==4)
-                System.out.println("List has 4");
-        }
+//        Iterator<Integer> it = linkedList.iterator();
+//        while (it.hasNext()){
+//            if(it.next()==4)
+//                System.out.println("List has 4");
+//        }
 
         System.out.println(linkedList);
 
-        ArrayList arrayList = new ArrayList();
+        ArrayList<String> arrayList = new ArrayList<>();
 
         arrayList.add("Thinh");
         arrayList.add("Phon");
-        arrayList.set(1, "Huy");
+//        arrayList.set(1, "Huy");
+//        arrayList.remove(1);
 
         System.out.println(arrayList);
 

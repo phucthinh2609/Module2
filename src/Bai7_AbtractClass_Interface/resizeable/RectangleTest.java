@@ -12,7 +12,12 @@ public class RectangleTest {
         System.out.println(rectangle);
 
         Rectangle rectangle1 = new Rectangle();
-        rectangle1.resize(10);
+        System.out.println("Pre-resize height: "+rectangle.getHeight());
+        System.out.println("Pre-resize width: "+rectangle.getWidth());
+        rectangle.resize(0.5);
+        System.out.println("After-resize height: "+rectangle.getHeight());
+        System.out.println("After-resize width: "+rectangle.getWidth());
+
 
     }
 }

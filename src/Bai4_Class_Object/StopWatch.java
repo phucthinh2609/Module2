@@ -32,7 +32,8 @@ public class StopWatch {
     public static void main(String[] args) {
         StopWatch a = new StopWatch();
         a.start();
-//        a.end();
+        a.getElapsedTime();
+        a.end();
         a.getElapsedTime();
         System.out.println("Result "+a.getElapsedTime());
     }

@@ -1,9 +1,9 @@
 package postOffice;
 
-public class Mailbox2 implements Observer{
+public class People2 implements Observer{
 
     @Override
     public void updateMessage(String message) {
-        System.out.println("Mailbox2 received: "+message);
+        System.out.println("People2 received: "+message);
     }
 }

@@ -1,2 +1,5 @@
-package Bai21_DesignPattern.command;public class ICommand {
+package Bai21_DesignPattern.command;
+
+public interface ICommand {
+    void execute();
 }

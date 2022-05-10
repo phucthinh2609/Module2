@@ -1,2 +1,5 @@
-package postOffice;public interface Observer {
+package postOffice;
+
+public interface Observer {
+    void updateMessage(String message);
 }

@@ -2,12 +2,12 @@ package Bai10_ArrayList_LinkedList.ArrayList;
 
 import java.util.Arrays;
 
-public class AddGetList<E> {
+public class MyArrayList<E> {
     private int size = 0;
     private int DEFAULT_CAPACITY = 10;
     private Object[] elements;
 
-    public AddGetList(){
+    public MyArrayList(){
         elements = new Object[DEFAULT_CAPACITY];
     }
 
@@ -31,7 +31,7 @@ public class AddGetList<E> {
     }
 
     public static void main(String[] args) {
-        AddGetList<Integer> myList = new AddGetList<>();
+        MyArrayList<Integer> myList = new MyArrayList<>();
 
         myList.add(2);
         myList.add(3);
@@ -40,11 +40,10 @@ public class AddGetList<E> {
         System.out.println("Element 2: "+myList.get(2));
         System.out.println("Element 1: "+myList.get(1));
 
-//        myList.get(5);
-//        System.out.println("Element 5: "+ myList.get(5));
+//        System.out.println("Element 5: "+ myList.get(3));
 
-        myList.get(-1);
-        System.out.println("Element -1: "+ myList.get(-1));
+//        myList.get(-1);
+//        System.out.println("Element -1: "+ myList.get(-1));
 
     }
 }
