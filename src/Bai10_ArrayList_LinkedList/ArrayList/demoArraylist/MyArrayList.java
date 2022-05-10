@@ -2,17 +2,17 @@ package Bai10_ArrayList_LinkedList.ArrayList.demoArraylist;
 
 import java.util.Arrays;
 
-public class MyArrayList<T> {
+public class MyArrayList<E> {
     private int size = 0;
     private static final int DEFAULT_CAPACITY = 8;
-    private T[] data;
+    private E[] data;
 
     public MyArrayList() {
-        data = (T[]) new Object[DEFAULT_CAPACITY];
+        data = (E[]) new Object[DEFAULT_CAPACITY];
     }
 
     public MyArrayList(int size) {
-        data = (T[]) new Object[size];
+        data = (E[]) new Object[size];
     }
 
     private void ensureCapa() {
@@ -22,13 +22,13 @@ public class MyArrayList<T> {
         }
     }
 
-    public void add(T e) {
+    public void add(E e) {
         size += 1;
         ensureCapa();
         data[size - 1] = e;
     }
 
-    public boolean add(int index, T e ) {
+    public boolean add(int index, E e ) {
         if (index >= 0 && index <= size) {
             size += 1;
             ensureCapa();
@@ -41,7 +41,7 @@ public class MyArrayList<T> {
         return false;
     }
 
-    public T get(int index) {
+    public E get(int index) {
         if (index >= 0 && index < size) {
             return data[index];
         }
@@ -50,14 +50,14 @@ public class MyArrayList<T> {
 
     @Override
     public MyArrayList clone() {
-        MyArrayList<T> clone = new MyArrayList<>(data.length);
-        for (T x : data) {
+        MyArrayList<E> clone = new MyArrayList<>(data.length);
+        for (E x : data) {
             clone.add(x);
         }
         return clone;
     }
 
-    public T[] getData() {
+    public E[] getData() {
         return this.data;
     }
 
@@ -77,11 +77,11 @@ public class MyArrayList<T> {
     }
 
     public void clear() {
-        data = (T[]) new Object[DEFAULT_CAPACITY];
+        data = (E[]) new Object[DEFAULT_CAPACITY];
         size = 0;
     }
 
-    public int indexOf(T e) {
+    public int indexOf(E e) {
         for (int i = 0; i < size; i++) {
             if (data[i].equals(e)) {
                 return i;
@@ -90,8 +90,8 @@ public class MyArrayList<T> {
         return -1;
     }
 
-    public boolean contains(T e) {
-        for (T x : data) {
+    public boolean contains(E e) {
+        for (E x : data) {
             if (e.equals(x)) {
                 return true;
             }
