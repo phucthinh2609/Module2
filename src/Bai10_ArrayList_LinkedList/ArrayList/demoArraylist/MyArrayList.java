@@ -4,86 +4,82 @@ import java.util.Arrays;
 
 public class MyArrayList<E> {
     private int size = 0;
-    private static final int DEFAULT_CAPACITY = 8;
-    private E[] data;
+    private static final int DEFAULT_CAPACITY = 10;
+    private Object[] elements;
 
     public MyArrayList() {
-        data = (E[]) new Object[DEFAULT_CAPACITY];
+        elements =  new Object[DEFAULT_CAPACITY];
     }
 
     public MyArrayList(int size) {
-        data = (E[]) new Object[size];
+        elements =  new Object[size];
     }
 
-    private void ensureCapa() {
-        if (size > data.length) {
-            int biggerSize = size * 2 + 1;
-            data = Arrays.copyOf(data, biggerSize);
+    public void checkBoundExclusive(int index){
+        if (index<0 || index>=size){
+            throw new IndexOutOfBoundsException("Index" + index + ", Size: " + size);
         }
+    }
+
+    private void ensureCap() {
+        int newSize = elements.length*2;
+        elements = Arrays.copyOf(elements, newSize);
+
     }
 
     public void add(E e) {
-        size += 1;
-        ensureCapa();
-        data[size - 1] = e;
-    }
-
-    public boolean add(int index, E e ) {
-        if (index >= 0 && index <= size) {
-            size += 1;
-            ensureCapa();
-            for (int i = size - 2; i >= index; i--) {
-                data[i + 1] = data[i];
-            }
-            data[index] = e;
-            return true;
+        if(size == elements.length){
+            ensureCap();
         }
-        return false;
+        elements[size++] = e;
     }
 
-    public E get(int index) {
+    public void add(int index, E e ) {
+        checkBoundExclusive(index);
+        if(size == elements.length){
+            ensureCap();
+        }
+        if(size != elements.length){
+            System.arraycopy(elements, index, elements, index+1, size-index);
+        }
+        elements[index] = e;
+        size++;
+    }
+
+    public Object get(int index) {
         if (index >= 0 && index < size) {
-            return data[index];
+            return elements[index];
         }
         return null;
     }
 
     @Override
     public MyArrayList clone() {
-        MyArrayList<E> clone = new MyArrayList<>(data.length);
-        for (E x : data) {
-            clone.add(x);
+        MyArrayList<E> clone = new MyArrayList<>(elements.length);
+        for (Object x : elements) {
+            clone.add((E) x);
         }
         return clone;
-    }
-
-    public E[] getData() {
-        return this.data;
     }
 
     public int size() {
         return size;
     }
 
-    public boolean remove(int index) {
-        if (index >= 0 && index < size) {
-            for (int i = index; i < size; i++) {
-                data[i] = data[i + 1];
-            }
-            size -= 1;
-            return true;
-        }
-        return false;
+    public void remove(int index) {
+        checkBoundExclusive(index);
+        System.arraycopy(elements, index + 1, elements, index, size - index);
+        elements[--size] = null;
     }
 
     public void clear() {
-        data = (E[]) new Object[DEFAULT_CAPACITY];
+        elements = new Object[DEFAULT_CAPACITY];
         size = 0;
     }
 
     public int indexOf(E e) {
         for (int i = 0; i < size; i++) {
-            if (data[i].equals(e)) {
+            if (elements[i].equals(e)) {
                 return i;
             }
         }
@@ -91,7 +87,7 @@ public class MyArrayList<E> {
     }
 
     public boolean contains(E e) {
-        for (E x : data) {
+        for (Object x : elements) {
             if (e.equals(x)) {
                 return true;
             }
@@ -99,4 +95,17 @@ public class MyArrayList<E> {
         return false;
     }
 
+    public void printList() {
+        System.out.print("ArrayList = [");
+        for (int i = 0; i < elements.length - 1; i++) {
+            if (!(elements[i] == null)) {
+                if (elements[i + 1] == null) {
+                    System.out.print((String) elements[i]);
+                    break;
+                }
+                System.out.print((String) elements[i] + ", ");
+            }
+        }
+        System.out.println("]\n");
+    }
 }
