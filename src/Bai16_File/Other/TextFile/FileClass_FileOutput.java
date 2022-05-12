@@ -1,4 +1,4 @@
-package Bai16_File.Other.FileText;
+package Bai16_File.Other.TextFile;
 
 import java.io.File;
 import java.io.FileOutputStream;

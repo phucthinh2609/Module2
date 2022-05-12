@@ -1,10 +1,10 @@
-package Bai16_File.Other.FileText;
+package Bai16_File.Other.TextFile;
 
 import java.io.*;
 import java.util.ArrayList;
 import java.util.List;
 
-public class FileBinaryTest {
+public class BinaryFileTest {
     public static void main(String[] args) {
 //        saveFile();
         readFile();
@@ -44,7 +44,7 @@ public class FileBinaryTest {
         }
     }
 
-    static void saveFile(){
+    public static void saveFile(){
         List<Student> studentList = new ArrayList<>();
         studentList.add(new Student("Nguyen Van A", "Ha Noi"));
         studentList.add(new Student("Nguyen Van B", "Hue"));
