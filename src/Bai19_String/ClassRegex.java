@@ -17,8 +17,8 @@ public class ClassRegex {
 
     public static void main(String[] args) {
         ClassRegex classRegex = new ClassRegex();
-        System.out.println("Class name valid: " + classRegex.validate("C0318G"));;
-        System.out.println("Class name invalid: " + classRegex.validate("M0318G"));;
-        System.out.println("Class name invalid: " + classRegex.validate("P0323A"));;
+        System.out.println("Class C0318G valid: " + classRegex.validate("C0318G"));;
+        System.out.println("Class M0318G invalid: " + classRegex.validate("M0318G"));;
+        System.out.println("Class P0323A invalid: " + classRegex.validate("P0323A"));;
     }
 }
