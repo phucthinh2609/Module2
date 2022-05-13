@@ -16,7 +16,6 @@ public class FileClass_FileOutput {
             try {
                 file.createNewFile();
             } catch (IOException e) {
-
             }
         }
             System.out.println("File not found");
@@ -46,10 +45,12 @@ public class FileClass_FileOutput {
         } catch (IOException e) {
             e.printStackTrace();
         } finally {
-            try {
-                fos.close();
-            } catch (IOException e) {
-                e.printStackTrace();
+            if (fos != null) {
+                try {
+                    fos.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
             }
         }
     }
