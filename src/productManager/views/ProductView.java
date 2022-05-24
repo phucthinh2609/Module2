@@ -164,7 +164,8 @@ public class ProductView {
             if (product == null){
                 System.err.println("Nhập sai. Vui lòng nhập lại");
                 flag = true;
-            }
+            } else
+                flag = false;
         } while (flag);
 
         showProductsFind(InputOption.SHOW, productService.findByName(title));
