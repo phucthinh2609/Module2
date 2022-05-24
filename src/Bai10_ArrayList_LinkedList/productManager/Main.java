@@ -43,7 +43,7 @@ public class Main {
                     System.exit(0);
                     break;
                 default:
-                    System.out.println("Nhập sai!!!");
+                    System.err.println("Nhập sai!!!");
             }
         }while (choose != 8);
     }
@@ -102,7 +102,7 @@ public class Main {
                 break;
             }
         }
-        System.out.println("\nSản phẩm không tồn tại!!!");
+        System.err.println("\nSản phẩm không tồn tại!!!");
     }
 
     private static void sortProductByPriceCRE() {
@@ -118,7 +118,7 @@ public class Main {
     }
 
     private static void sortProductByPriceDE() {
-        Collections.sort(productList, new Comparator<Product>() {
+            Collections.sort(productList, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
                 if(o1.getPrice() > o2.getPrice())

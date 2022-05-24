@@ -1,13 +1,19 @@
-package Project.PlaneTicket;
+package Project.planeTicket;
 
+import java.io.Serializable;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
-public class VeMayBay {
+public class VeMayBay implements Serializable {
     String id;
     String name;
     String date;
     String bag;
     int price;
+
+    public VeMayBay() {
+    }
 
     public VeMayBay(String id, String name, String date, String bag, int price) {
         this.id = id;
@@ -57,23 +63,38 @@ public class VeMayBay {
         this.price = price;
     }
 
-    public void input(){
+    public void input() {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Nhap ma ve: ");
-        int id = scanner.nextInt();
+        System.out.println("Nhập mã vé: ");
+        while (true) {
+            id = scanner.nextLine();
+            String  pattermStr = "((VJ[1-9]{1}[0-9]{2})|(VN[1-9]{1}[0-9]{2}[0-9]?)|(JS[1-9]{1}[0-9]{2}))";
 
-        System.out.println("Nhap ten may bay: ");
+            Pattern pattern = Pattern.compile(pattermStr);
+            Matcher matcher = pattern.matcher(id);
+
+            if (matcher.find())
+                break;
+            else
+                System.err.println("Nhập lại!!!");
+        }
+
+        System.out.println("Nhập tên máy bay: ");
         String name = scanner.nextLine();
 
-        System.out.println("Nhap ngay bay: ");
+        System.out.println("Nhập ngày bay: ");
         String date = scanner.nextLine();
 
-        System.out.println("Nhap hanh ly ky gui: ");
+        System.out.println("Nhập hành lý ký gửi: ");
         String bag = scanner.nextLine();
 
-        System.out.println("Nhap gia bay: ");
-        int price = scanner.nextInt();
+        System.out.println("Nhập giá máy bay: ");
+        price = Integer.parseInt(scanner.nextLine());
+    }
+
+    public void display() {
+        System.out.println(toString());
     }
 
     @Override
@@ -83,11 +104,7 @@ public class VeMayBay {
                 ", name='" + name + '\'' +
                 ", date='" + date + '\'' +
                 ", bag='" + bag + '\'' +
-                 ", price=" + price +
+                ", price=" + price +
                 '}';
-    }
-
-    public void display(){
-
     }
 }
